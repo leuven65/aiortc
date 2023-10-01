@@ -30,7 +30,7 @@
 
 <h2>Options</h2>
 <div class="option">
-    <input id="use-datachannel" checked="checked" type="checkbox"/>
+    <input id="use-datachannel" type="checkbox"/>
     <label for="use-datachannel">Use datachannel</label>
     <select id="datachannel-parameters">
         <option value='{"ordered": true}'>Ordered, reliable</option>
@@ -49,12 +49,12 @@
     </select>
 </div>
 <div class="option">
-    <input id="use-video" type="checkbox"/>
+    <input id="use-video" checked="checked" type="checkbox"/>
     <label for="use-video">Use video</label>
     <select id="video-resolution">
-        <option value="" selected>Default resolution</option>
-        <option value="320x240">320x240</option>
+        <!-- <option value="" selected>Default resolution</option> -->
         <option value="640x480">640x480</option>
+        <option value="320x240">320x240</option>
         <option value="960x540">960x540</option>
         <option value="1280x720">1280x720</option>
     </select>
@@ -65,9 +65,9 @@
         <option value="rotate">Rotate</option>
     </select>
     <select id="video-codec">
-        <option value="default" selected>Default codecs</option>
-        <option value="VP8/90000">VP8</option>
+        <!-- <option value="default" selected>Default codecs</option> -->
         <option value="H264/90000">H264</option>
+        <option value="VP8/90000">VP8</option>
     </select>
 </div>
 <div class="option">

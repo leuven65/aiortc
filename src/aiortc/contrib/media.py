@@ -484,8 +484,11 @@ class MediaRecorder:
                     context.stream.height = frame.height
                 context.started = True
 
-            for packet in context.stream.encode(frame):
-                self.__container.mux(packet)
+            if isinstance(frame, (VideoFrame, AudioFrame)):
+                for packet in context.stream.encode(frame):
+                    self.__container.mux(packet)
+            else:
+                self.__container.mux(frame)
 
 
 class RelayStreamTrack(MediaStreamTrack):

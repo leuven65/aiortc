@@ -33,7 +33,7 @@ def create_local_tracks(play_from, decode):
                 )
             elif platform.system() == "Windows":
                 webcam = MediaPlayer(
-                    "video=Integrated Camera", format="dshow", options=options
+                    "video=Integrated Webcam", format="dshow", options=options
                 )
             else:
                 webcam = MediaPlayer("/dev/video0", format="v4l2", options=options)
